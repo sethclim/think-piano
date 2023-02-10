@@ -1,0 +1,119 @@
+@import './brand.module.scss';
+@import "./breakpoints.scss";
+
+@mixin smallFont {
+    font-size: $sf + 0.35;
+    //color: blue;
+    @include sm{
+        font-size: $sf + 0.25;
+       //color: red;
+    }
+    @include md{
+        font-size: $sf + 0.2;
+        //color: pink;
+    }
+    @include lg{
+        font-size: $sf + 0.3;
+    }
+}
+
+@mixin medFont($boost) {
+    font-size: $mf + $boost;
+
+    @include sm{
+        font-size: $mf + $boost + 0.2;
+    }
+    @include md{
+        font-size: $mf + $boost+ 0.3;
+    }
+    @include lg{
+        font-size: $mf + $boost + 0.4;
+    }
+}
+
+
+@mixin largeFont($boost) {
+    font-size: $lf + $boost;
+
+    @include sm{
+        font-size: $lf + $boost + 0.4;
+    }
+    @include md{
+        font-size: $lf + $boost + 0.5;
+    }
+    @include lg{
+        font-size: $lf + $boost + 1.0;
+    }
+}
+
+.small{
+    color: $dark;
+    @include smallFont;
+    margin: 0;
+}
+
+.med{
+    color: $offWhite;
+    @include medFont(0);
+    margin: 0;
+}
+
+.studyTitle{
+    color: $dark;
+    @include medFont(2);
+    margin: 0;
+    width: 80%;
+}
+
+
+.subTitle{
+    color: $dark;
+    @include medFont(0.3);
+    margin: 0;
+}
+
+.TitleDark{
+    color: $dark;
+    @include largeFont(0);
+    margin: 0.2em 0;
+}
+
+.Titlelight{
+    color: $offWhite;
+    @include largeFont(0);
+    margin: 0.2em 0;
+}
+
+.heroTitle{
+    color: #F20F38;
+    @include largeFont(8em);
+    margin: 0.1em 0;
+
+
+}
+.heroSubTitle{
+    color: $offWhite;
+    @include medFont(0.2);
+    margin-left: 1em;
+    font-weight: 100;
+}
+
+.headerLink{
+    color: $dark;
+    @include medFont(-0.3);
+}
+
+.headerLink:hover{
+    color: $lightGrey;
+    cursor: pointer;
+}
+
+.highLight{
+    @include smallFont;
+    width: 6em; 
+    background-color: black;
+    color: white; 
+    padding: 1em; 
+    border-radius: 5px;
+    margin-right: 5px;
+}

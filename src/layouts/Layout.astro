@@ -4,6 +4,7 @@ export interface Props {
 }
 
 const { title } = Astro.props;
+
 ---
 
 <!DOCTYPE html>
@@ -24,6 +25,14 @@ const { title } = Astro.props;
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
 	}
+	*,
+	*::before,
+	*::after {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	
+	}
 	html {
 		font-family: system-ui, sans-serif;
 		background-color: #F6F6F6;
@@ -32,4 +41,22 @@ const { title } = Astro.props;
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
+	body{
+		margin: 0;
+		padding: 0;
+		display: flex;
+		flex-direction: column;
+
+		overflow: scroll;
+		-ms-overflow-style: none; /* IE, Edge */
+		scrollbar-width: none;    /* Firefox */
+
+	}
+
+	/* Chrome, Safari,  */
+	body::-webkit-scrollbar{
+		display: none; 
+	}
+
+
 </style>

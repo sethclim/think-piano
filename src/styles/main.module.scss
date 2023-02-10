@@ -1,0 +1,89 @@
+@import './core/brand.module.scss';
+@import './core/layout.module.scss';
+@import './core/text.module.scss';
+
+.header{
+    background-color: $dark;
+    color: $offWhite;
+    width: 100vw;
+    height: 8vh;
+    
+    @include Flex(row);
+}
+
+.hero{
+    height: 50vh;
+    background-color: $primary;
+
+    @include Flex("column");
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+.about{
+    min-height: 60vh;
+    background-color: $offWhite;
+
+    @include Flex(column, 'flex-Start', 'Flex-Start');
+
+    gap: 20px;
+
+    div{
+        width: 100%;
+        @include Flex(column);
+    }
+
+    @include xl{
+        @include Flex(row, 'flex-Start', 'Flex-Start');
+    }
+}
+
+.aboutleft{ 
+
+    p{
+        width: 80%;
+        text-align: justify; 
+    }
+}
+
+.aboutright{
+    @include Flex(row);
+}
+
+.me{
+    height: 30em;
+    border-radius: 50%;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+
+.contact{
+    height: 50vh;
+    background-color: $dark;
+
+    @include Flex(column);
+    padding-top:5em;
+}
+
+
+.reviews{
+    height: 10vh;
+}
+
+
+
+
+
+
+
+.footer{
+    background-color: $dark;
+    color: $offWhite;
+    width: 100vw;
+    height: 8vh; 
+
+    @include Flex(row);
+}

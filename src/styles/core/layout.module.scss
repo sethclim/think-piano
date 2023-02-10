@@ -1,0 +1,26 @@
+@import "./breakpoints.scss";
+
+.maxPage{
+    width: 80%;
+
+     @include sm {
+        width: 70%;
+    }
+    @include md {
+        width: 70%;
+    }
+    @include xl {
+        width: 65%;
+    }
+}
+
+@mixin Flex($dir, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items:  $align;
+}
+
+.RowCenter{
+    @include Flex(row);
+}
