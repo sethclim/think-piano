@@ -1,0 +1,29 @@
+---
+import form from './form.module.scss'
+---
+
+<div class={form.container}>
+    <div class={form.left}>
+      <div class={form.appTitle}>
+        <span>CONTACT</span>
+        <span>US</span>
+      </div>
+      <div class={form.appContact}>CONTACT INFO : +1 705-571-1633</div>
+    </div>
+    <div class={form.right}>
+      <div class={form.appForm}>
+        <div class={form.appFormGroup}>
+          <input class={form.appFormControl} placeholder="NAME" >
+        </div>
+        <div class={form.appFormGroup}>
+          <input class={form.appFormControl} placeholder="EMAIL">
+        </div>
+        <div class={form.appFormGroupMessage}>
+          <textarea class={form.appFormControl} placeholder="MESSAGE"></textarea>
+        </div>
+        <div class={form.appFormGroup}>
+          <button class={form.appFormButton}>SEND</button>
+        </div>
+      </div>
+    </div>
+</div>

@@ -1,0 +1,141 @@
+
+@import "../../styles/core/text.module.scss";
+@import "../../styles/core/layout.module.scss";
+@import "../../styles/core/breakpoints.scss";
+
+button, input , textarea{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+}
+
+.container{
+    @include Flex(column);
+    @include md {
+        @include Flex(row)
+    }
+}
+
+.screen:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    bottom: 0;
+    border-radius: 15px;    
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+    z-index: -1;
+}
+
+.appTitle {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #F20F38;
+    font-size: 50px;
+    overflow: visible;
+}
+
+.appTitle:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 25px;
+    height: 4px;
+    background: #F20F38;
+}
+
+.appContact {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    color: #888;
+}
+
+.appFormGroup {
+    margin-bottom: 15px;
+}
+
+.appFormGroup.message {
+    margin-top: 40px;
+}
+
+.textArea{
+    height: 15vh;
+    text-transform: uppercase;
+}
+
+
+.appFormControl {
+    width: 100%;
+    padding: 10px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #666;
+    color: #ddd;
+    @include medFont(0);
+    text-transform: uppercase;
+    outline: none;
+    transition: border-color .2s;
+}
+
+.appFormControl::placeholder {
+    color: #666;
+}
+
+.appFormControl:focus {
+    border-bottom-color: #ddd;
+}
+
+.appFormButton {
+    background: none;
+    border: none;
+    color: #F20F38;
+    font-size: 30px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 20px;
+    margin-bottom: 0;
+    text-align: right;
+}
+
+.appFormButton:hover {
+    color: #b9134f;
+}
+
+
+@media screen and (max-width: 520px) {
+    .screenBody {
+        flex-direction: column;
+    }
+
+    .screenBodyItem.left {
+        margin-bottom: 30px;
+    }
+
+    .appTitle {
+        flex-direction: row;
+    }
+
+    .appTitle span {
+        margin-right: 12px;
+    }
+
+    .appTitle:after {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .screenBody {
+        padding: 40px;
+    }
+
+    .screenBodyItem {
+        padding: 0;
+    }
+}

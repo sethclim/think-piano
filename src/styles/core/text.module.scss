@@ -60,7 +60,7 @@
 
 .studyTitle{
     color: $dark;
-    @include medFont(2);
+    @include medFont(1);
     margin: 0;
     width: 80%;
 }
@@ -86,15 +86,13 @@
 
 .heroTitle{
     color: #F20F38;
-    @include largeFont(8em);
+    @include largeFont(2em);
     margin: 0.1em 0;
-
-
 }
+
 .heroSubTitle{
     color: $offWhite;
     @include medFont(0.2);
-    margin-left: 1em;
     font-weight: 100;
 }
 
