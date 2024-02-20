@@ -20,14 +20,13 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-
 }
 
 .about{
-    min-height: 60vh;
+    min-height: 80vh;
     background-color: $offWhite;
 
-    @include Flex(column, 'flex-Start', 'Flex-Start');
+    @include Flex(column);
 
     gap: 20px;
 
@@ -42,7 +41,6 @@
 }
 
 .aboutleft{ 
-
     p{
         width: 80%;
         text-align: justify; 
@@ -60,7 +58,7 @@
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 
     @include sm{
-        height: 5em;
+        height: 12em;
     }
     @include md{
         height: 20em;
@@ -68,11 +66,10 @@
 }
 
 .contact{
-    height: 50vh;
+    min-height: 50vh;
     background-color: $dark;
 
     @include Flex(column);
-    padding-top:5em;
 }
 
 .reviews{
@@ -86,4 +83,9 @@
     height: 8vh; 
 
     @include Flex(row);
+}
+
+.why{
+    @include medFont(-0.4);
+    color: $dark;
 }

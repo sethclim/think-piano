@@ -12,6 +12,8 @@
     @include xl {
         width: 65%;
     }
+
+    overflow: hidden;
 }
 
 @mixin Flex($dir, $justify: center, $align: center) {
