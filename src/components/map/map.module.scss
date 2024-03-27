@@ -1,0 +1,19 @@
+
+@import "../../styles/core/text.module.scss";
+@import "../../styles/core/layout.module.scss";
+@import "../../styles/core/breakpoints.scss";
+
+.container{
+    @include Flex(column);
+    @include md {
+        @include Flex(row)
+    }
+    overflow: hidden;
+    height: 100%;
+}
+
+/* Set the size of the div element that contains the map */
+.map {
+    height: 400px; /* The height is 400 pixels */
+    width: 100%; /* The width is the width of the web page */
+}

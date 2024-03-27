@@ -6,7 +6,7 @@ import text from '../styles/core/text.module.scss'
 import layout from '../styles/core/layout.module.scss'
 
 import Form from '../components/form/Form.astro';
-
+import Map from '../components/map/Map.astro';
 ---
 
 <Layout title="Think Piano">
@@ -56,6 +56,12 @@ import Form from '../components/form/Form.astro';
 		<!-- <div class={styles.reviews}>
 		
 		</div> -->
+
+		<div class={styles.map}>
+			<div class={layout.maxPage}>
+				<Map />
+			</div>
+		</div>
 
 	</main>
 
