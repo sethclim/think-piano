@@ -97,3 +97,24 @@
     @include medFont(-0.4);
     color: $dark;
 }
+
+.midBanner{
+    background-color:#F20F38;
+    height: 8em;
+    text-align: center;
+    @include Flex(column);
+
+    p{
+        color: $offWhite;
+        font-weight: 900;
+        @include largeFont(0);
+        margin: 0.2em 0;
+    }
+}
+
+.pricing{
+    min-height: 50vh;
+    background-color: $offWhite;
+
+    @include Flex(column);
+}

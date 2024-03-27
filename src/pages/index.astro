@@ -7,6 +7,7 @@ import layout from '../styles/core/layout.module.scss'
 
 import Form from '../components/form/Form.astro';
 import Map from '../components/map/Map.astro';
+import Pricing from '../components/pricing/pricing.astro';
 ---
 
 <Layout title="Think Piano">
@@ -42,6 +43,20 @@ import Map from '../components/map/Map.astro';
 						<img class={styles.me} src="images/me.jfif" />
 					</div>
 				</div>
+			</div>
+		</div>
+
+		<div class={styles.midbanner}>
+			<div class={styles.midBanner}>
+				<div class={layout.maxPage}>
+					<p style={text.TitleLight}>First Lesson Free</p>
+				</div>
+			</div>
+		</div>
+
+		<div class={styles.pricing}>
+			<div class={layout.maxPage}>
+				<Pricing />
 			</div>
 		</div>
 
