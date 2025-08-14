@@ -74,7 +74,7 @@
 }
 
 .contact{
-    min-height: 50vh;
+    min-height: 40vh;
     background-color: $dark;
 
     @include Flex(column);
@@ -115,7 +115,7 @@
 
 .ctaBanner{
     background-color:$dark;
-    height: 12em;
+    height: 14em;
     text-align: center;
     @include Flex(column);
 
@@ -125,8 +125,15 @@
         color: $offWhite;
         font-weight: 900;
         @include largeFont(0);
-        margin: 0.2em 0;
+        // margin: 0.2em 0;
     }
+}
+
+.ctaWrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .pricing{

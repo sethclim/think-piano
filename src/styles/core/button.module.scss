@@ -24,8 +24,9 @@
     // @include Flex('vertical');
     background-color: #F20F38;
     @include medFont(0);
-    height: 45px;
-    width: 40%;
+    font-weight: 700;
+
+    width: 30%;
     color: $offWhite;
     // padding: 4px;
     border-radius: 5px; 
@@ -35,6 +36,9 @@
     text-align: center;
     margin: 12px 6px;
     padding: 10px 20px;
+    display: block;
+    box-sizing: border-box;
+    border: 1pt solid $offWhite ;
 }
 
 .cta:hover{
