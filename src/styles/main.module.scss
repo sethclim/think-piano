@@ -112,6 +112,23 @@
     }
 }
 
+
+.ctaBanner{
+    background-color:$dark;
+    height: 12em;
+    text-align: center;
+    @include Flex(column);
+
+    margin: 0 0  6em 0em;
+
+    p{
+        color: $offWhite;
+        font-weight: 900;
+        @include largeFont(0);
+        margin: 0.2em 0;
+    }
+}
+
 .pricing{
     min-height: 50vh;
     background-color: $offWhite;

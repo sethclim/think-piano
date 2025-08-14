@@ -8,6 +8,7 @@ import layout from '../styles/core/layout.module.scss'
 import Form from '../components/form/Form.astro';
 import Map from '../components/map/Map.astro';
 import Pricing from '../components/pricing/pricing.astro';
+import button from '../styles/core/button.module.scss'
 ---
 
 <Layout title="Think Piano">
@@ -59,6 +60,17 @@ import Pricing from '../components/pricing/pricing.astro';
 				<Pricing />
 			</div>
 		</div>
+
+		<!-- <div class={styles.ctaBanner}> -->
+			<div class={styles.ctaBanner}>
+				<div class={layout.maxPage}>
+					<div style="height: 10em">
+						<p class={text.TitleLight}>Book Your First Lesson Now: </p>
+						<a class={button.cta} href="https://app.squareup.com/appointments/book/x5eb5yrqejnh1r/LB9R04M6CT4RD/start" rel="nofollow">Book Now</a>
+					</div>
+				</div>
+			</div>
+		<!-- </div> -->
 
 		<!-- CONTACT -->
 		<div class={styles.contact}>
