@@ -1,7 +1,11 @@
 import { defineConfig } from 'astro/config';
 
+import cloudflare from "@astrojs/cloudflare";
+
 // https://astro.build/config
 export default defineConfig({
-    site: 'https://sethclim.github.io',     
-    base: "/think-piano",
+  site: 'https://climenhagamusicacademy.com',
+  base: "/",
+  output: "server",
+  adapter: cloudflare()
 });
