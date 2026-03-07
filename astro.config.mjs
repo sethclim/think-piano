@@ -7,5 +7,8 @@ export default defineConfig({
   site: 'https://climenhagamusicacademy.com',
   base: "/",
   output: "server",
-  adapter: cloudflare()
+  adapter: cloudflare(),
+  image: {
+    service: "compile"
+  }
 });
