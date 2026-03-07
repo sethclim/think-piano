@@ -12,7 +12,7 @@ importers:
         specifier: ^12.6.12
         version: 12.6.12(astro@5.18.0(rollup@4.59.0)(sass@1.97.3)(typescript@5.9.3))(sass@1.97.3)
       astro:
-        specifier: ^5.0.8
+        specifier: ^5.18.0
         version: 5.18.0(rollup@4.59.0)(sass@1.97.3)(typescript@5.9.3)
       sass:
         specifier: ^1.58.0
