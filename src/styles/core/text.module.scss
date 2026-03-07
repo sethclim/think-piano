@@ -1,65 +1,65 @@
-@import './brand.module.scss';
-@import "./breakpoints.scss";
+@use './brand.module.scss';
+@use "./breakpoints.module.scss";
 
 @mixin smallFont {
-    font-size: $sf + 0.35;
+    font-size: brand.$sf + 0.35;
     //color: blue;
-    @include sm{
-        font-size: $sf + 0.25;
+    @include breakpoints.sm{
+        font-size: brand.$sf + 0.25;
        //color: red;
     }
-    @include md{
-        font-size: $sf + 0.2;
+    @include breakpoints.md{
+        font-size: brand.$sf + 0.2;
         //color: pink;
     }
-    @include lg{
-        font-size: $sf + 0.3;
+    @include breakpoints.lg{
+        font-size: brand.$sf + 0.3;
     }
 }
 
 @mixin medFont($boost) {
-    font-size: $mf + $boost;
+    font-size: brand.$mf + $boost;
 
-    @include sm{
-        font-size: $mf + $boost + 0.2;
+    @include breakpoints.sm{
+        font-size: brand.$mf + $boost + 0.2;
     }
-    @include md{
-        font-size: $mf + $boost+ 0.3;
+    @include breakpoints.md{
+        font-size: brand.$mf + $boost+ 0.3;
     }
-    @include lg{
-        font-size: $mf + $boost + 0.4;
+    @include breakpoints.lg{
+        font-size: brand.$mf + $boost + 0.4;
     }
 }
 
 
 @mixin largeFont($boost) {
-    font-size: $lf + $boost;
+    font-size: brand.$lf + $boost;
 
-    @include sm{
-        font-size: $lf + $boost + 0.4;
+    @include breakpoints.sm{
+        font-size: brand.$lf + $boost + 0.4;
     }
-    @include md{
-        font-size: $lf + $boost + 0.5;
+    @include breakpoints.md{
+        font-size: brand.$lf + $boost + 0.5;
     }
-    @include lg{
-        font-size: $lf + $boost + 1.0;
+    @include breakpoints.lg{
+        font-size: brand.$lf + $boost + 1.0;
     }
 }
 
 .small{
-    color: $dark;
+    color: brand.$dark;
     @include smallFont;
     margin: 0;
 }
 
 .med{
-    color: $offWhite;
+    color: brand.$offWhite;
     @include medFont(0);
     margin: 0;
 }
 
 .studyTitle{
-    color: $dark;
+    color: brand.$dark;
     @include medFont(1);
     margin: 0;
     width: 80%;
@@ -67,19 +67,19 @@
 
 
 .subTitle{
-    color: $dark;
+    color: brand.$dark;
     @include medFont(0.3);
     margin: 0;
 }
 
 .TitleDark{
-    color: $dark;
+    color: brand.$dark;
     @include largeFont(0);
     margin: 0.2em 0;
 }
 
 .Titlelight{
-    color: $offWhite;
+    color: brand.$offWhite;
     @include largeFont(0);
     margin: 0.2em 0;
 }
@@ -95,7 +95,7 @@
 }
 
 .heroSubTitle{
-    color: $offWhite;
+    color: brand.$offWhite;
     @include medFont(0);
     font-weight: 100;
 
@@ -106,12 +106,12 @@
 }
 
 .headerLink{
-    color: $dark;
+    color: brand.$dark;
     @include medFont(-0.3);
 }
 
 .headerLink:hover{
-    color: $lightGrey;
+    color: brand.$lightGrey;
     cursor: pointer;
 }
 

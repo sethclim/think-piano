@@ -1,11 +1,11 @@
 
-@import "../../styles/core/text.module.scss";
-@import "../../styles/core/layout.module.scss";
-@import "../../styles/core/breakpoints.scss";
-@import "../../styles/core/brand.module.scss";
+@use "../../styles/core/text.module.scss";
+@use "../../styles/core/layout.module.scss";
+@use "../../styles/core/breakpoints.module.scss";
+@use "../../styles/core/brand.module.scss";
 
 .container{
-    @include Flex(column);
+    @include layout.Flex(column);
     overflow: hidden;
     min-width: 0px;
     // max-width: 0vw;
@@ -15,11 +15,11 @@
 }
 
 .pricing {
-  @include sm {
-    @include Flex(column);
+  @include breakpoints.sm {
+    @include layout.Flex(column);
   }
-  @include md {
-    @include Flex(row);
+  @include breakpoints.md {
+    @include layout.Flex(row);
 
     justify-content: space-between;
   }
@@ -29,7 +29,7 @@
 }
 .pricingPlan {
   flex: 1;
-  background-color: $dark;
+  background-color: brand.$dark;
   margin: 15px 8px;
   padding: 30px;
   border-radius: 6px;
@@ -39,7 +39,7 @@
 
 .pricingPlan h2 {
   text-align: center;
-  @include md {
+  @include breakpoints.md {
     text-align: left;
   }
   margin-top: 0;
@@ -88,5 +88,5 @@
   
 }
 .pricingPlan a:hover {
-  background-color: $dark;
+  background-color: brand.$dark;
 }

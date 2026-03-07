@@ -1,27 +1,28 @@
-@import './core/brand.module.scss';
-@import './core/layout.module.scss';
-@import './core/text.module.scss';
+@use './core/brand.module.scss';
+@use './core/layout.module.scss';
+@use './core/text.module.scss';
+@use './core/breakpoints.module.scss';
 
 .header{
-    background-color: $dark;
-    color: $offWhite;
+    background-color: brand.$dark;
+    color: brand.$offWhite;
     width: 100vw;
     height: 8vh;
     
-    @include Flex(row);
+    @include layout.Flex(row);
 
     font-family: "Days One", sans-serif;
     font-weight: 100;
     font-style: normal;
 
-    @include smallFont()
+    @include text.smallFont()
 }
 
 .hero{
     height: 50vh;
-    background-color: $primary;
+    background-color: brand.$primary;
 
-    @include Flex("column");
+    @include layout.Flex("column");
 
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -32,19 +33,19 @@
 
 .about{
     min-height: 80vh;
-    background-color: $offWhite;
+    background-color: brand.$offWhite;
 
-    @include Flex(column);
+    @include layout.Flex(column);
 
     gap: 20px;
 
     div{
         width: 100%;
-        @include Flex(column);
+        @include layout.Flex(column);
     }
 
-    @include xl{
-        @include Flex(row, 'flex-Start', 'Flex-Start');
+    @include breakpoints.xl{
+        @include layout.Flex(row, 'flex-Start', 'Flex-Start');
     }
 }
 
@@ -56,7 +57,7 @@
 }
 
 .aboutright{
-    @include Flex(row);
+    @include layout.Flex(row);
 }
 
 .me{
@@ -65,19 +66,19 @@
     border-radius: 50%;
     box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
 
-    @include sm{
+    @include breakpoints.sm{
         height: 12em;
     }
-    @include md{
+    @include breakpoints.md{
         height: 25em;
     }
 }
 
 .contact{
     min-height: 40vh;
-    background-color: $dark;
+    background-color: brand.$dark;
 
-    @include Flex(column);
+    @include layout.Flex(column);
 }
 
 .reviews{
@@ -85,46 +86,46 @@
 }
 
 .footer{
-    background-color: $dark;
-    color: $offWhite;
+    background-color: brand.$dark;
+    color: brand.$offWhite;
     width: 100vw;
     height: 8vh; 
 
-    @include Flex(row);
+    @include layout.Flex(row);
 }
 
 .why{
-    @include medFont(-0.4);
-    color: $dark;
+    @include text.medFont(-0.4);
+    color: brand.$dark;
 }
 
 .midBanner{
     background-color:#F20F38;
     height: 8em;
     text-align: center;
-    @include Flex(column);
+    @include layout.Flex(column);
 
     p{
-        color: $offWhite;
+        color: brand.$offWhite;
         font-weight: 900;
-        @include largeFont(0);
+        @include text.largeFont(0);
         margin: 0.2em 0;
     }
 }
 
 
 .ctaBanner{
-    background-color:$dark;
+    background-color:brand.$dark;
     height: 14em;
     text-align: center;
-    @include Flex(column);
+    @include layout.Flex(column);
 
     margin: 0 0  6em 0em;
 
     p{
-        color: $offWhite;
+        color: brand.$offWhite;
         font-weight: 900;
-        @include largeFont(0);
+        @include text.largeFont(0);
         // margin: 0.2em 0;
     }
 }
@@ -138,7 +139,7 @@
 
 .pricing{
     min-height: 50vh;
-    background-color: $offWhite;
+    background-color: brand.$offWhite;
 
-    @include Flex(column);
+    @include layout.Flex(column);
 }
