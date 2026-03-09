@@ -1,98 +1,115 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 
-import styles from '../styles/main.module.scss'
-import text from '../styles/core/text.module.scss'
-import layout from '../styles/core/layout.module.scss'
+import styles from "../styles/main.module.scss";
+import text from "../styles/core/text.module.scss";
+import layout from "../styles/core/layout.module.scss";
 
-import Form from '../components/form/Form.astro';
-import Map from '../components/map/Map.astro';
-import Pricing from '../components/pricing/pricing.astro';
-import button from '../styles/core/button.module.scss'
+import Form from "../components/form/Form.astro";
+import Map from "../components/map/Map.astro";
+import Pricing from "../components/pricing/pricing.astro";
+import button from "../styles/core/button.module.scss";
 ---
 
-<Layout title="Think Piano">
-	<header class={styles.header}>
-		<div class={layout.maxPage}>
-			<p class={text.med}>Climenhaga Music Academy</p>
-		</div>
-	</header>
-	<main>
-		<!-- HERO -->
-		<div class={styles.hero} style="background-image: url('images/closeup.webp')">
-			<!-- <img  src="images/closeup.jpg" /> -->
-			<div class={layout.maxPage}>
-				<div class={styles.heromsg}>
-					<h1 class={text.heroTitle}>Climenhaga Music Academy</h1>
-					<h3 class={text.heroSubTitle}>Unleash Your Inner Musician with Expert Music Lessons</h3>
-				</div>
-			</div>
-		</div>
+<Layout title='ClimenhagaMusicAcademy'>
+    <header class={styles.header}>
+        <div class={layout.maxPage}>
+            <p class={text.med}>Climenhaga Music Academy</p>
+        </div>
+    </header>
+    <main>
+        <!-- HERO -->
+        <div
+            class={styles.hero}
+            style="background-image: url('images/closeup.webp')"
+        >
+            <!-- <img  src="images/closeup.jpg" /> -->
+            <div class={layout.maxPage}>
+                <div class={styles.heromsg}>
+                    <h1 class={text.heroTitle}>Climenhaga Music Academy</h1>
+                    <h3 class={text.heroSubTitle}>
+                        Unleash Your Inner Musician with Expert Music Lessons
+                    </h3>
+                </div>
+            </div>
+        </div>
 
-		<!-- ABOUT -->	
-		<div class={layout.RowCenter}>
-			<div class={layout.maxPage}>
-				<div class={styles.about}>
-					<div class={styles.aboutleft}>
-						<h3 class={text.studyTitle}>Why Study With Us?</h3>
-						<p class={styles.why}>
-							<br/>
-							Studying at our music studio is the perfect way to enhance your musical
-							skills and reach new levels of excellence. Our experienced instructors will provide personalized attention and guidance to help you achieve your goals. Whether you are a beginner looking to learn the basics or a seasoned musician seeking to perfect your craft, we have the resources and expertise to support you.</p>
-					</div>
-					<div class={styles.aboutright}>
-						<img class={styles.me} src="images/seth_headshot.webp" />
-					</div>
-				</div>
-			</div>
-		</div>
+        <!-- ABOUT -->
+        <div class={layout.RowCenter}>
+            <div class={layout.maxPage}>
+                <div class={styles.about}>
+                    <div class={styles.aboutleft}>
+                        <h3 class={text.studyTitle}>Why Study With Us?</h3>
+                        <p class={styles.why}>
+                            <br />
+                            Studying at our music studio is the perfect way to enhance
+                            your musical skills and reach new levels of excellence.
+                            Our experienced instructors will provide personalized
+                            attention and guidance to help you achieve your goals.
+                            Whether you are a beginner looking to learn the basics
+                            or a seasoned musician seeking to perfect your craft,
+                            we have the resources and expertise to support you.
+                        </p>
+                    </div>
+                    <div class={styles.aboutright}>
+                        <img
+                            class={styles.me}
+                            src='images/seth_headshot.webp'
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
 
-		<div class={styles.midbanner}>
-			<div class={styles.midBanner}>
-				<div class={layout.maxPage}>
-					<p style={text.TitleLight}>First Lesson Free</p>
-				</div>
-			</div>
-		</div>
+        <div class={styles.midbanner}>
+            <div class={styles.midBanner}>
+                <div class={layout.maxPage}>
+                    <p style={text.TitleLight}>First Lesson Free</p>
+                </div>
+            </div>
+        </div>
 
-		<div class={styles.pricing}>
-			<div class={layout.maxPage}>
-				<Pricing />
-			</div>
-		</div>
+        <div class={styles.pricing}>
+            <div class={layout.maxPage}>
+                <Pricing />
+            </div>
+        </div>
 
-		<!-- <div class={styles.ctaBanner}> -->
-			<div class={styles.ctaBanner}>
-				<div class={layout.maxPage}>
-					<div class={styles.ctaWrap}>
-						<p class={text.TitleLight}>Book Your First Lesson Now: </p>
-						<a class={button.cta} href="https://app.squareup.com/appointments/book/x5eb5yrqejnh1r/LB9R04M6CT4RD/start" rel="nofollow">BOOK NOW</a>
-					</div>
-				</div>
-			</div>
-		<!-- </div> -->
+        <!-- <div class={styles.ctaBanner}> -->
+        <div class={styles.ctaBanner}>
+            <div class={layout.maxPage}>
+                <div class={styles.ctaWrap}>
+                    <p class={text.TitleLight}>Book Your First Lesson Now:</p>
+                    <a
+                        class={button.cta}
+                        href='https://app.squareup.com/appointments/book/x5eb5yrqejnh1r/LB9R04M6CT4RD/start'
+                        rel='nofollow'>BOOK NOW</a
+                    >
+                </div>
+            </div>
+        </div>
+        <!-- </div> -->
 
-		<!-- CONTACT -->
-		<div class={styles.contact}>
-			<div class={layout.maxPage}>
-				<Form />
-			</div>
-		</div>
+        <!-- CONTACT -->
+        <div class={styles.contact}>
+            <div class={layout.maxPage}>
+                <Form />
+            </div>
+        </div>
 
-		<!-- Reviews -->
-		<!-- <div class={styles.reviews}>
+        <!-- Reviews -->
+        <!-- <div class={styles.reviews}>
 		
 		</div> -->
 
-		<!-- <div class={styles.map}>
+        <!-- <div class={styles.map}>
 			<div class={layout.maxPage}>
 				<Map />
 			</div>
 		</div> -->
+    </main>
 
-	</main>
-
-	<footer class={styles.footer}>
-		Copyright @2025 Climenhaga Music Academy
-	</footer>
+    <footer class={styles.footer}>
+        Copyright @2025 Climenhaga Music Academy
+    </footer>
 </Layout>
