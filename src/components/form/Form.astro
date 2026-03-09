@@ -1,30 +1,47 @@
 ---
-import form from './form.module.scss'
+import form from "./form.module.scss";
 ---
 
 <div class={form.container}>
     <div class={form.left}>
-      <div class={form.appTitle}>
-        <span>CONTACT</span>
-        <span>US</span>
-      </div>
-      <div class={form.appContact}>CONTACT: +1 705-571-1633</div>
+        <div class={form.appTitle}>
+            <span>CONTACT</span>
+            <span>US</span>
+        </div>
+        <div class={form.appContact}>CONTACT: +1 705-571-1633</div>
     </div>
-    <div class={form.right} >
-      <form class={form.appForm} target="_blank" action="https://formsubmit.co/sethclim@gmail.com" method="POST">
-        <div class={form.appFormGroup}>
-          <input class={form.appFormControl} placeholder="NAME" >
-        </div>
-        <div class={form.appFormGroup}>
-          <input class={form.appFormControl} placeholder="EMAIL">
-        </div>
-        <div class={form.appFormGroupMessage}>
-          <textarea class={form.appFormControl} placeholder="MESSAGE"></textarea>
-        </div>
-        <div class={form.appFormGroup}>
-          <button type="submit" value="Submit" class={form.appFormButton}>SEND</button>
-        </div>
-      </form>
+    <div class={form.right}>
+        <form
+            class={form.appForm}
+            target='_blank'
+            action='https://formsubmit.co/sethclim@gmail.com'
+            method='POST'
+        >
+            <div class={form.appFormGroup}>
+                <input
+                    class={form.appFormControl}
+                    name='name'
+                    placeholder='NAME'
+                />
+            </div>
+            <div class={form.appFormGroup}>
+                <input
+                    class={form.appFormControl}
+                    name='email'
+                    placeholder='EMAIL'
+                />
+            </div>
+            <div class={form.appFormGroupMessage}>
+                <textarea
+                    class={form.appFormControl}
+                    name='message'
+                    placeholder='MESSAGE'></textarea>
+            </div>
+            <div class={form.appFormGroup}>
+                <button type='submit' value='Submit' class={form.appFormButton}
+                    >SEND</button
+                >
+            </div>
+        </form>
     </div>
 </div>
-
