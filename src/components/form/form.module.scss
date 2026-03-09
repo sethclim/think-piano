@@ -68,7 +68,7 @@ textarea{
     border-bottom: 1px solid #666;
     color: #ddd;
     @include text.medFont(0);
-    text-transform: uppercase;
+    // text-transform: uppercase;
     outline: none;
     transition: border-color .2s;
 }
