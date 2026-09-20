@@ -1,0 +1,84 @@
+@use '../../styles/core/brand.module.scss';
+@use '../../styles/core/layout.module.scss';
+@use '../../styles/core/text.module.scss';
+@use '../../styles/core/breakpoints.module.scss';
+
+.banner{
+    background-color: #F20F38;
+    color: brand.$offWhite;
+    width: 100%;
+
+    @include layout.Flex(column);
+    gap: 4px;
+
+    padding: 10px 10px;
+    text-align: center;
+    position: relative;
+
+    @include breakpoints.md{
+        @include layout.Flex(row, center, center);
+        gap: 16px;
+        padding: 10px 40px;
+    }
+}
+
+.msg{
+    @include text.smallFont;
+    font-weight: 700;
+    margin: 0;
+    width: auto;
+}
+
+.timer{
+    display: flex;
+    gap: 6px;
+    align-items: baseline;
+    width: auto;
+}
+
+.unit{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    width: auto;
+}
+
+.num{
+    @include text.smallFont;
+    font-weight: 900;
+    width: auto;
+}
+
+.label{
+    font-size: 0.6em;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    opacity: 0.85;
+    width: auto;
+}
+
+.close{
+    position: absolute;
+    top: 6px;
+    right: 10px;
+
+    background: none;
+    border: none;
+    color: brand.$offWhite;
+    font-size: 1em;
+    line-height: 1;
+    padding: 4px;
+    width: auto;
+    cursor: pointer;
+    opacity: 0.8;
+
+    @include breakpoints.md{
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.close:hover{
+    opacity: 1;
+}

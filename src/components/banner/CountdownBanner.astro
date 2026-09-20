@@ -1,0 +1,87 @@
+---
+import styles from './banner.module.scss';
+
+const deadline = '2026-10-01T00:00:00';
+---
+
+<div class={styles.banner} id='fall-banner' data-deadline={deadline}>
+    <p class={styles.msg}>🍂 Fall Special — 15% Off 4 Months of Lessons</p>
+    <div class={styles.timer}>
+        <div class={styles.unit}>
+            <span class={styles.num} data-unit='days'>00</span>
+            <span class={styles.label}>Days</span>
+        </div>
+        <div class={styles.unit}>
+            <span class={styles.num} data-unit='hours'>00</span>
+            <span class={styles.label}>Hrs</span>
+        </div>
+        <div class={styles.unit}>
+            <span class={styles.num} data-unit='minutes'>00</span>
+            <span class={styles.label}>Min</span>
+        </div>
+        <div class={styles.unit}>
+            <span class={styles.num} data-unit='seconds'>00</span>
+            <span class={styles.label}>Sec</span>
+        </div>
+    </div>
+    <button type='button' class={styles.close} id='fall-banner-close' aria-label='Dismiss'>&times;</button>
+</div>
+
+<script>
+    const banner = document.getElementById('fall-banner');
+    if (banner) {
+        const deadline = new Date(banner.dataset.deadline as string).getTime();
+        const dismissKey = `fallBannerDismissed_${banner.dataset.deadline}`;
+
+        const hide = () => {
+            banner.style.display = 'none';
+        };
+
+        let dismissed = false;
+        try {
+            dismissed = localStorage.getItem(dismissKey) === 'true';
+        } catch (e) {}
+
+        if (dismissed) {
+            hide();
+        } else {
+            const dayEl = banner.querySelector('[data-unit="days"]');
+            const hourEl = banner.querySelector('[data-unit="hours"]');
+            const minEl = banner.querySelector('[data-unit="minutes"]');
+            const secEl = banner.querySelector('[data-unit="seconds"]');
+
+            const pad = (n: number) => String(n).padStart(2, '0');
+
+            const tick = () => {
+                const remaining = deadline - Date.now();
+
+                if (remaining <= 0) {
+                    hide();
+                    clearInterval(interval);
+                    return;
+                }
+
+                const days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((remaining / (1000 * 60 * 60)) % 24);
+                const minutes = Math.floor((remaining / (1000 * 60)) % 60);
+                const seconds = Math.floor((remaining / 1000) % 60);
+
+                if (dayEl) dayEl.textContent = pad(days);
+                if (hourEl) hourEl.textContent = pad(hours);
+                if (minEl) minEl.textContent = pad(minutes);
+                if (secEl) secEl.textContent = pad(seconds);
+            };
+
+            tick();
+            const interval = setInterval(tick, 1000);
+        }
+
+        const closeBtn = document.getElementById('fall-banner-close');
+        closeBtn?.addEventListener('click', () => {
+            hide();
+            try {
+                localStorage.setItem(dismissKey, 'true');
+            } catch (e) {}
+        });
+    }
+</script>
