@@ -1,24 +1,68 @@
 ---
 export interface Props {
 	title: string;
+	description?: string;
 }
 
-const { title } = Astro.props;
+const {
+	title,
+	description = "Private piano lessons in Waterloo, ON with Climenhaga Music Academy. Personalized instruction for all ages and skill levels — book your free first lesson today.",
+} = Astro.props;
 
+const ogImage = new URL("/images/closeup.webp", Astro.site);
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
+
+const structuredData = {
+	"@context": "https://schema.org",
+	"@type": "MusicSchool",
+	name: "Climenhaga Music Academy",
+	description,
+	url: Astro.site?.toString(),
+	image: ogImage.toString(),
+	telephone: "+17055711633",
+	priceRange: "$45-$60",
+	areaServed: [
+		{ "@type": "City", name: "Waterloo" },
+		{ "@type": "City", name: "Kitchener" },
+		{ "@type": "City", name: "Cambridge" },
+	],
+	address: {
+		"@type": "PostalAddress",
+		addressLocality: "Waterloo",
+		addressRegion: "ON",
+		addressCountry: "CA",
+	},
+};
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-CA">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/think-piano/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="preload" as="image" href="/images/closeup.webp" fetchpriority="high" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Days+One&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
 		<title>{title}</title>
+		<meta name="description" content={description} />
+		<link rel="canonical" href={canonicalUrl} />
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
+		<meta property="og:url" content={canonicalUrl} />
+		<meta property="og:image" content={ogImage} />
+		<meta property="og:locale" content="en_CA" />
+
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content={ogImage} />
+
+		<script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
 	</head>
 	<body>
 		<slot />

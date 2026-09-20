@@ -12,7 +12,10 @@ import CountdownBanner from "../components/banner/CountdownBanner.astro";
 import button from "../styles/core/button.module.scss";
 ---
 
-<Layout title='ClimenhagaMusicAcademy'>
+<Layout
+    title='Piano Lessons in Waterloo, ON | Climenhaga Music Academy'
+    description='Private piano lessons in Waterloo, ON with Climenhaga Music Academy. Personalized instruction for all ages and skill levels — book your free first lesson today.'
+>
     <CountdownBanner />
     <!-- <header class={styles.header}>
         <div class={layout.maxPage}>
@@ -29,9 +32,10 @@ import button from "../styles/core/button.module.scss";
             <div class={layout.maxPage}>
                 <div class={styles.heromsg}>
                     <h1 class={text.heroTitle}>Climenhaga Music Academy</h1>
-                    <h3 class={text.heroSubTitle}>
-                        Unleash Your Inner Musician with Expert Music Lessons
-                    </h3>
+                    <h2 class={text.heroSubTitle}>
+                        Unleash Your Inner Musician with Expert Piano Lessons in
+                        Waterloo, Ontario
+                    </h2>
                 </div>
             </div>
         </div>
@@ -41,7 +45,7 @@ import button from "../styles/core/button.module.scss";
             <div class={layout.maxPage}>
                 <div class={styles.about}>
                     <div class={styles.aboutleft}>
-                        <h3 class={text.studyTitle}>Why Study With Me?</h3>
+                        <h2 class={text.studyTitle}>Why Study With Me?</h2>
                         <p class={styles.why}>
                             <br />
                             Studying piano with me is the perfect way to enhance
@@ -56,7 +60,8 @@ import button from "../styles/core/button.module.scss";
                     <div class={styles.aboutright}>
                         <img
                             class={styles.me}
-                            src='images/seth.png'
+                            src='images/seth.webp'
+                            alt='Seth Climenhaga, piano instructor at Climenhaga Music Academy in Waterloo, ON'
                         />
                     </div>
                 </div>
@@ -112,6 +117,6 @@ import button from "../styles/core/button.module.scss";
     </main>
 
     <footer class={styles.footer}>
-        Copyright @2025 Climenhaga Music Academy
+        © 2026 Climenhaga Music Academy — Piano Lessons in Waterloo, Kitchener &amp; Cambridge, ON
     </footer>
 </Layout>
